@@ -12,5 +12,6 @@ public abstract class Personas
         Dni = dni;
     }
 
+
     public abstract void MostrarInformacion();
 }
