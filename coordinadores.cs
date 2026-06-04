@@ -9,7 +9,7 @@ public class Coordinadores : Personas
     }
 ^
 
-    public void MostrarInformacion(List<string> areasAsignadas, int voluntariosACargo)
+    public override void MostrarInformacion(List<string> areasAsignadas, int voluntariosACargo)
     {
         Console.WriteLine("El coordinador tiene asignadas las siguientes áreas:");
         for (int i = 0 ; i < areasAsignadas.Count ; i++)
