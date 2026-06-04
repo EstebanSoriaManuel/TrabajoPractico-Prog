@@ -1,8 +1,10 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
+
 class Program
 {
-    static List<Coordinadores> listaCoordinadores = new list<Coordinadores>();
-    static List<Voluntario> listaVoluntarios = new list<Voluntario>();
+    static List<Coordinadores> listaCoordinadores = new List<Coordinadores>();
+    static List<Voluntario> listaVoluntarios = new List<Voluntario>();
 
     static void Main()
     {
@@ -87,7 +89,7 @@ class Program
         int voluntariosACargo = int.Parse(Console.ReadLine());
 
 
-        Coordinador coordinador1 = new Coordinador(nombre, dni, areasAsignadas, voluntariosACargo);
+        Coordinadores coordinador1 = new Coordinadores(nombre, dni, areasAsignadas, voluntariosACargo);
         listaCoordinadores.Add(coordinador1);
         Console.WriteLine("Se registró el coordinador con éxito.");
         
@@ -107,16 +109,16 @@ class Program
             Console.WriteLine("Informacion de voluntarios:");
             foreach (Voluntario v in listaVoluntarios)
             {
-                Console.WriteLine(v.MostrarInformacion());
+                v.MostrarInformacion();
             }
         }
 
         else if(opcion == 2)
         {
             Console.WriteLine("Informacion de coordinadores:");
-            foreach (Coordinador c in listaCoordinadores)
+            foreach (Coordinadores c in listaCoordinadores)
             {
-                Console.WriteLine(c.MostrarInformacion());
+                c.MostrarInformacion();
             }
         }
         
